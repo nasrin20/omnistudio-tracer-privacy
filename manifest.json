@@ -1,0 +1,47 @@
+{
+  "name": "OmniStudio DR/IP Tracer",
+  "description": "Trace OmniStudio DataRaptor and Integration Procedure calls directly inside Salesforce",
+  "version": "1.0.0",
+  "manifest_version": 3,
+
+  "permissions": ["storage", "sidePanel", "tabs","scripting"],
+  "host_permissions": ["*://*.force.com/*",
+  "*://*.salesforce.com/*",
+  "*://*.site.com/*"],
+
+   "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.force.com/*",
+        "*://*.salesforce.com/*",
+        "*://*.site.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+   "web_accessible_resources": [
+    {
+      "resources": ["inject.js"],
+      "matches": [
+        "*://*.force.com/*",
+        "*://*.salesforce.com/*",
+         "*://*.site.com/*"
+      ]
+    }
+  ],
+
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  }
+}

@@ -1,0 +1,64 @@
+body {
+  font-family: system-ui;
+  margin: 0;
+  background: #f7f9fb;
+}
+
+header {
+  padding: 10px;
+  background: #1b5fcc;
+  color: white;
+}
+
+#filters button {
+  margin-right: 6px;
+}
+
+#list {
+  max-height: 40vh;
+  overflow-y: auto;
+}
+
+.trace {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.trace.dr { border-left: 4px solid #2e844a; }
+.trace.ip { border-left: 4px solid #ba0517; }
+
+#details {
+  border-top: 1px solid #ccc;
+}
+
+pre {
+  padding: 10px;
+  background: #0f172a;
+  color: #e5e7eb;
+  overflow: auto;
+}
+.trace {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.trace.active {
+  background: #e7f1ff;
+}
+
+.trace.dr {
+  border-left: 4px solid #2c7be5;
+}
+
+.trace.ip {
+  border-left: 4px solid #6f42c1;
+}
+
+.trace .sub {
+  font-size: 11px;
+  color: #666;
+}
+

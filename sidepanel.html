@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="sidepanel.css" />
+</head>
+<body>
+  <header>
+    <h3>OmniStudio Tracer</h3>
+    <div id="filters">
+      <button data-type="All">All</button>
+      <button data-type="DataRaptor">DR</button>
+      <button data-type="IntegrationProcedure">IP</button>
+      <button id="clear">Clear</button>
+    </div>
+  </header>
+
+  <div id="list"></div>
+
+  <div id="details">
+    <div class="tabs">
+      <button data-tab="request">Request</button>
+      <button data-tab="response">Response</button>
+    </div>
+    <pre id="json"></pre>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
